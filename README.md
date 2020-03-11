@@ -1,4 +1,6 @@
-```教程地址：https://blog.csdn.net/Laughing_G/article/details/104715173
+教程地址：https://blog.csdn.net/Laughing_G/article/details/104715173
+
+
 一、意义：
 ==== 
            在区块链世界中，虚拟货币一般存放在三个地方（矿机用户端、钱包、交易所）。矿机端转账繁琐，没有UI界面，对于无运维基础的用户来说具有很大的上手难度。交易端无法直接获取矿机端的收益，且有项目方跑路的危险性。为了解决以上问题，亟需一款既有安全性又能简单完成转账的软件。此时“钱包”横空出世，以区块链世界运输者的身份完善了区块链世界。
@@ -25,7 +27,7 @@ npm install --save ethers
 
 为了快速测试，这里我们默认连接ganache-cli(8545)
 
-let ethers=require('ethers');
+```let ethers=require('ethers');
 //1.通过私钥创建钱包
 let privateKey='0xec3702c3c89d352b95e0e0288fab1ca16c55977963804748e215cb9415c72b58';
 let w1=new ethers.Wallet(privateKey);
@@ -79,12 +81,12 @@ console.log(`mnemonic: ${w5_mnemonic}`);
 let path1 = "m/44'/60'/0'/0/0";
 let thirdMnemonicWallet = ethers.Wallet.fromMnemonic(w5_mnemonic, path1);
 console.log("thirdMnemonicWallet:",thirdMnemonicWallet.address);
-
+```
 处理加密的 JSON 钱包文件
 
 加密钱包输出 JSON wallet
 
-let password = "password123";
+```let password = "password123";
 
 function callback(progress) {
     console.log("Encrypting: " + parseInt(progress * 100) + "% complete");
@@ -95,7 +97,7 @@ let encryptPromise = wallet.encrypt(password, callback);
 encryptPromise.then(function(json) {
     console.log(json);
 });
-
+```
 3.React
 一款前端框架，由于官方推出了Truffle-react框架，所以促进了大部分区块链项目使用react开发。目前React和Vue拥有着区块链项目很大的市场占有率。
 
